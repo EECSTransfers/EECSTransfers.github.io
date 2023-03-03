@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>EECS Transfers @ Berkeley</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://unpkg.com/jparticles/browser/jparticles.base.js"></script>
+<script src="https://unpkg.com/jparticles/browser/particle.js"></script>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+.profile-pic-gallary {
+    padding: 0px;
+    display: inline;
+}
+
+.image--cover-container {
+    width: 90px;
+    float: left;
+    text-align: center;
+    margin: 0px;
+    margin-right: 40px;
+}
+
+.image--cover {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    object-position: center right
+}
+
+#particles {
+    height: 100vh;
+  }
+
+.titletext {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+.navbar {
+  font-family: 'Syncopate', sans-serif;
+  overflow-y: hidden;
+  overflow-x: auto;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  white-space: nowrap;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.12s;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-card w3-left-align w3-large navbar">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 4</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-indigo w3-center">
+  <div id="particles"></div>
+  <br/>
+  <div class="titletext">
+    <h1 class="w3-margin w3-jumbo">EECS Transfers at Berkeley</h1>
+    <!-- <p class="w3-xlarge">Template by w3.css</p>
+    <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>
+    -->
+  </div>
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Who We Are </h1>
+      <h5 class="w3-padding-32">EECS Transfers at Berkeley aims to build a community and provide resources to better ensure academic success and career readiness for transfer students interested in the field of electrical engineering and computer sciences. We try to create an open and fun learning environment where anyone with any skill level can join us!</h5>
+
+      <!-- <p class="w3-text-grey"></p> -->
+    </div>
+
+    <div class="w3-third w3-center">
+      <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-center">
+      <div class="profile-pic-gallary">
+        <h2>People</h2>
+        
+        <div class="image--cover-container">
+            <img src="/jekyll-course-website-template/_images/pp/potter.jpg" class="image--cover">
+            
+            <p><a href="https://en.wikipedia.org/wiki/Harry_Potter_(character)">Christopher Keokot</a></p>
+            <p>President</p>
+            
+        </div>
+        
+        <div class="image--cover-container">
+            <img src="/jekyll-course-website-template/_images/pp/granger.jpg" class="image--cover">
+            
+            <p><a href="https://en.wikipedia.org/wiki/Hermione_Granger">Kavan Mehrizi</a></p>
+            <p>Vice President</p>
+        </div>
+        
+        <div class="image--cover-container">
+            <img src="/jekyll-course-website-template/_images/pp/weasley.jpg" class="image--cover">
+            
+            <p><a href="https://en.wikipedia.org/wiki/Ron_Weasley">Darren Munoz</a></p>
+            <p>Title</p>
+        </div>
+
+        <div class="image--cover-container">
+          <img src="/jekyll-course-website-template/_images/pp/weasley.jpg" class="image--cover">
+          
+          <p><a href="https://en.wikipedia.org/wiki/Ron_Weasley">Nithid Veravit</a></p>
+          <p>Title</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+  <h5 class="w3-padding-32">hambuger</h5>
+  <div class="w3-xlarge w3-padding-32">
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-github w3-hover-opacity"></i>
+    <i class="fab fa-discord w3-hover-opacity"></i>
+ </div>
+ <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+<script>
+  new JParticles.Particle('#particles', {
+    color: 'rgba(255,255,255,.2)',
+    lineShape: 'cube',
+    range: 2000,
+    proximity: 100,
+    parallax: true,
+    maxSpeed: 0.3
+  })
+</script>
+
+</body>
+</html>
