@@ -48,13 +48,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
+
 .navbar {
   font-family: 'Syncopate', sans-serif;
   overflow-y: hidden;
   overflow-x: auto;
   background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
   position: fixed;
   top: 0;
   z-index: 1;
@@ -71,6 +70,27 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   padding: 14px 16px;
   text-decoration: none;
   transition: 0.12s;
+}
+
+body::before {
+		content:""; /* required for ::before */
+		position:fixed; /* don't scroll with page */
+		z-index:-100; /* place behind elements on page */
+		width:100%;
+		height:100%;
+		background-color:#14C2CC;
+		background-image: 
+		radial-gradient(circle farthest-side at top right, transparent, #0D64FF), radial-gradient(ellipse farthest-corner at 0% 100%, transparent, #FF00A0);
+		animation:bg-change 10s infinite;
+}
+
+@keyframes bg-change {
+	0%, 100% {
+		filter:hue-rotate(0deg);
+	}
+	50% {
+		filter:hue-rotate(-45deg);
+	}
 }
 </style>
 </head>
@@ -97,11 +117,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </div>
 
 <!-- Header -->
-<header class="w3-container w3-indigo w3-center">
+<header class="w3-container w3-center">
   <div id="particles"></div>
   <br/>
   <div class="titletext">
-    <h1 class="w3-margin w3-jumbo">EECS Transfers at Berkeley</h1>
+    <h1 class="w3-margin w3-jumbo" style="color: white;">EECS Transfers at Berkeley</h1>
     <!-- <p class="w3-xlarge">Template by w3.css</p>
     <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>
     -->
@@ -109,17 +129,18 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </header>
 
 <!-- First Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container">
+<div class="w3-row-padding w3-padding-64 w3-container w3-indigo">
   <div class="w3-content">
     <div class="w3-twothird">
-      <h1>Who We Are </h1>
+      <h1>Who We Are</h1>
       <h5 class="w3-padding-32">EECS Transfers at Berkeley aims to build a community and provide resources to better ensure academic success and career readiness for transfer students interested in the field of electrical engineering and computer sciences. We try to create an open and fun learning environment where anyone with any skill level can join us!</h5>
 
       <!-- <p class="w3-text-grey"></p> -->
     </div>
 
     <div class="w3-third w3-center">
-      <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
+      <!-- <i class="fa fa-anchor w3-padding-64 w3-text-red"></i> -->
+      <img src="https://wallpapers.com/images/hd/ucb-single-tower-0gvdeoc6cfu2jkbw.jpg" alt="UC Berkeley" style="width: 100%; height: 100%;">
     </div>
   </div>
 </div>
@@ -130,12 +151,15 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <div class="w3-center">
       <div class="profile-pic-gallary">
         <h2>People</h2>
+        <br>
         
         <div class="image--cover-container">
             <img src="/jekyll-course-website-template/_images/pp/potter.jpg" class="image--cover">
             
             <p><a href="https://en.wikipedia.org/wiki/Harry_Potter_(character)">Christopher Keokot</a></p>
             <p>President</p>
+            <a href="https://www.linkedin.com/in/christopher-keokot/" class="w3-xlarge fab fa-linkedin w3-hover-opacity" style="text-decoration: none;"></a>
+            <a href="https://github.com/ckeokot" class="w3-xlarge fab fa-github w3-hover-opacity" style="text-decoration: none;"></a>
             
         </div>
         
@@ -144,6 +168,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
             
             <p><a href="https://en.wikipedia.org/wiki/Hermione_Granger">Kavan Mehrizi</a></p>
             <p>Vice President</p>
+            <a href="https://www.linkedin.com/in/kavanmehrizi/" class="w3-xlarge fab fa-linkedin w3-hover-opacity" style="text-decoration: none;"></a>
+            <a href="https://github.com/KavanMehrizi" class="w3-xlarge fab fa-github w3-hover-opacity" style="text-decoration: none;"></a>
         </div>
         
         <div class="image--cover-container">
@@ -151,6 +177,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
             
             <p><a href="https://en.wikipedia.org/wiki/Ron_Weasley">Darren Munoz</a></p>
             <p>Title</p>
+            <a href="https://www.linkedin.com/in/" class="w3-xlarge fab fa-linkedin w3-hover-opacity" style="text-decoration: none;"></a>
+            <a href="https://github.com/" class="w3-xlarge fab fa-github w3-hover-opacity" style="text-decoration: none;"></a>
         </div>
 
         <div class="image--cover-container">
@@ -158,6 +186,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
           
           <p><a href="https://en.wikipedia.org/wiki/Ron_Weasley">Nithid Veravit</a></p>
           <p>Title</p>
+          <a href="https://www.linkedin.com/in/" class="w3-xlarge fab fa-linkedin w3-hover-opacity" style="text-decoration: none;"></a>
+          <a href="https://github.com/" class="w3-xlarge fab fa-github w3-hover-opacity" style="text-decoration: none;"></a>
         </div>
       </div>
     </div>
@@ -165,11 +195,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </div>
 
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+    <h1 class="w3-margin w3-xlarge">Quote of the day: live laugh love it</h1>
 </div>
 
 <!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+<footer class="w3-container w3-padding-64 w3-center">  
   <h5 class="w3-padding-32">put stuff here.</h5>
   <div class="w3-xlarge w3-padding-32">
     <a href="" class="fab fa-instagram w3-hover-opacity" style="text-decoration: none;"></a>
@@ -178,7 +208,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <a href="https://discord.gg/FN8DJsEcrJ" class="fab fa-discord w3-hover-opacity" style="text-decoration: none;"></a>
  </div>
  <p>We are a student group acting independently of the University of California. We take full responsibility for our organization and this web site.</p>
- <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a> | <a href="https://www.ocf.berkeley.edu">
+ <p>Made with &#10084 in Berkeley | <a href="https://www.ocf.berkeley.edu">
   <img src="https://www.ocf.berkeley.edu/hosting-logos/ocf-hosted-penguin.svg"
       alt="Hosted by the OCF" style="border: 0;" />
 </a>
