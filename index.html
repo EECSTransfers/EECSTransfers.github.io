@@ -92,27 +92,44 @@ body::before {
 		filter:hue-rotate(-45deg);
 	}
 }
+
+.calendar-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
 </style>
 </head>
-<body>
+<body style="scroll-behaviour:smooth">
 
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-card w3-left-align w3-large navbar">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 1</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 2</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 3</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 4</a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="#aboutus" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About Us</a>
+    <a href="#join" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Join</a>
+    <a href="#calendar" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Calendar</a>
+    <a href="#socials" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Find Us</a>
   </div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+    <a href="#aboutus" class="w3-bar-item w3-button w3-padding-large">About Us</a>
+    <a href="#join" class="w3-bar-item w3-button w3-padding-large">Join</a>
+    <a href="#calendar" class="w3-bar-item w3-button w3-padding-large">Calendar</a>
+    <a href="#socials" class="w3-bar-item w3-button w3-padding-large">Find Us</a>
   </div>
 </div>
 
@@ -129,7 +146,7 @@ body::before {
 </header>
 
 <!-- First Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container w3-indigo">
+<div id="aboutus" class="w3-row-padding w3-padding-64 w3-container w3-indigo">
   <div class="w3-content">
     <div class="w3-twothird">
       <h1>Who We Are</h1>
@@ -150,7 +167,7 @@ body::before {
 </div>
 
 <!-- Second Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container w3-indigo">
+<div id="join" class="w3-row-padding w3-padding-64 w3-container w3-indigo">
   <div class="w3-content">
     <div class="w3-twothird">
       <h1>How to Join</h1>
@@ -164,17 +181,20 @@ body::before {
 </div>
 
 <!-- Third Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container w3-indigo">
+<div id="calendar" class="w3-row-padding w3-padding-64 w3-container w3-indigo">
   <div class="w3-content">
     <div class="w3-twothird">
       <h1>Calendar</h1>
-      <h5 class="w3-padding-32">Calendar coming soon!</h5>
+      <h5 class="w3-padding-32">Our calendar is a great way to stay up to date with our events and meetings. We also have a <a href="https://calendar.google.com/calendar/u/2?cid=Y181OGY5Mzg3NTBjNjVlNDAzNzE3ZGJlMmM5YTJhMGJmM2VmMWU0M2NhMTJkODhhNTlhOWJmYWM3ZjA0YzFkNzFjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20">Google Calendar</a> that you can add to your own calendar.</h5>
+      <div class="calendar-container">
+        <iframe class="responsive-iframe" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FLos_Angeles&showTitle=0&showTz=0&title=EECS%20Transfers%20at%20Berkeley&showCalendars=0&showTabs=1&showPrint=0&showDate=1&src=a2F2YW5tZWhyaXppQGJlcmtlbGV5LmVkdQ&src=Y180ZmVlMzBmMmQ3MDBmMDIxZTk3MWY4YTI5ZmZhN2IwZGFhNGE4ZjViYTRhODQzN2U0NGIzYTVhZmFlNWMyYTJmQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y181OGY5Mzg3NTBjNjVlNDAzNzE3ZGJlMmM5YTJhMGJmM2VmMWU0M2NhMTJkODhhNTlhOWJmYWM3ZjA0YzFkNzFjQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y184ZTA0MDdlMjRiOTcxZDNiOWI3NGUwZGRiZTk0YTM1MzdiOGIwZTIzODg0MDU5NzA4MjIyZjczMGY5ZmU0Nzc2QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%233F51B5&color=%23D50000&color=%23A79B8E&color=%23F6BF26&color=%2333B679" style="border-width:0" frameborder="0" scrolling="no"></iframe>
+      </div>
     </div>
   </div>
 </div>
 
 <!-- Fourth Grid -->
-<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+<div id="people" class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-center">
       <div class="profile-pic-gallary">
@@ -205,7 +225,7 @@ body::before {
             
             <p><a href="https://en.wikipedia.org/wiki/Ron_Weasley" style="text-decoration: none;">Darren Munoz</a></p>
             <p>Signatory</p>
-            <a href="https://www.linkedin.com/in/" class="w3-xlarge fab fa-linkedin w3-hover-opacity" style="text-decoration: none;"></a>
+            <a href="https://www.linkedin.com/in/darren-munoz-79894b247/" class="w3-xlarge fab fa-linkedin w3-hover-opacity" style="text-decoration: none;"></a>
             <a href="https://github.com/" class="w3-xlarge fab fa-github w3-hover-opacity" style="text-decoration: none;"></a>
         </div>
 
@@ -214,8 +234,8 @@ body::before {
           
           <p><a href="https://en.wikipedia.org/wiki/Ron_Weasley" style="text-decoration: none;">Nithid Veravit</a></p>
           <p>Signatory</p>
-          <a href="https://www.linkedin.com/in/" class="w3-xlarge fab fa-linkedin w3-hover-opacity" style="text-decoration: none;"></a>
-          <a href="https://github.com/" class="w3-xlarge fab fa-github w3-hover-opacity" style="text-decoration: none;"></a>
+          <a href="https://www.linkedin.com/in/nithid/" class="w3-xlarge fab fa-linkedin w3-hover-opacity" style="text-decoration: none;"></a>
+          <a href="https://github.com/mcmaxmcmc" class="w3-xlarge fab fa-github w3-hover-opacity" style="text-decoration: none;"></a>
         </div>
       </div>
     </div>
@@ -223,15 +243,15 @@ body::before {
 </div>
 
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <h1 class="w3-margin w3-xlarge">Quote of the day: live laugh love it</h1>
+    <h1 class="w3-margin w3-xlarge">Quote of the Semester: live laugh love it</h1>
 </div>
 
 <!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center">  
-  <h5 class="w3-padding-32">put stuff here.</h5>
+<footer id="socials" class="w3-container w3-padding-64 w3-center">  
+  <h5>Here are links to where to find us!</h5>
   <div class="w3-xlarge w3-padding-32">
-    <a href="" class="fab fa-instagram w3-hover-opacity" style="text-decoration: none;"></a>
-    <a href="" class="fab fa-twitter w3-hover-opacity" style="text-decoration: none;"></a>
+    <!-- <a href="" class="fab fa-instagram w3-hover-opacity" style="text-decoration: none;"></a>
+    <a href="" class="fab fa-twitter w3-hover-opacity" style="text-decoration: none;"></a> -->
     <a href="https://github.com/EECSTransfers" class="fab fa-github w3-hover-opacity" style="text-decoration: none;"></a>
     <a href="https://discord.gg/FN8DJsEcrJ" class="fab fa-discord w3-hover-opacity" style="text-decoration: none;"></a>
  </div>
